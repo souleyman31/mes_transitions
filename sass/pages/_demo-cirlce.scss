@@ -1,0 +1,47 @@
+.demo-circle {
+	margin-top: 10rem;
+	width: 40rem;
+	height: 40rem;
+	border: 1px solid $color-primary;
+	position: relative;
+	cursor: pointer;
+	&--demo {
+		width: 10rem;
+		height: 10rem;
+		border-radius: 10rem;
+		background-color: $color-primary;
+		position: absolute;
+		top: 15rem;
+		left: 15rem;
+	}
+	&_once {
+		transition: all 1s linear;
+	}
+	&_twice {
+		transition-property: top, left, background-color, border-radius;
+		transition-duration: 1s, 0.5s, 0.5s, 1s;
+		transition-timing-function: ease-in-out;
+	}
+	&_twice {
+		transition: all 1s ease-out;
+	}
+	&:hover &_once,
+	&.hover_effect &_once {
+		background-color: $color-once;
+		top: 0;
+		left: 0;
+	}
+	&:hover &_twice,
+	&.hover_effect &_twice {
+		top: 0;
+		left: 30rem;
+		border-radius: 0;
+		background-color: $color-twice;
+	}
+	&:hover &_third,
+	&.hover_effect &_third {
+		top: 30rem;
+		left: 15rem;
+		background-color: $color-third;
+	}
+}

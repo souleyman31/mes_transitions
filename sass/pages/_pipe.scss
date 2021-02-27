@@ -1,0 +1,36 @@
+.cat-container {
+	width: 30rem;
+	height: 30rem;
+	cursor: pointer;
+	perspective: 600;
+	position: relative;
+	&_card {
+		@include w-h;
+		transform-style: preserve-3d;
+		position: absolute;
+		transition: all 1s ease-in;
+
+		&:hover {
+			transform: rotateY(180deg);
+		}
+		.pile {
+			@include w-h;
+			backface-visibility: hidden;
+			overflow: hidden;
+			position: absolute;
+
+			img {
+				@include w-h;
+			}
+		}
+		.face {
+			@include w-h;
+			transform: rotateY(180deg);
+			background-color: $color-pipe;
+			line-height: 30rem;
+			color: $color-secondary;
+			font-size: 1.5rem;
+			text-align: center;
+		}
+	}
+}

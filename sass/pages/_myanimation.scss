@@ -1,0 +1,8 @@
+.animation {
+	margin-bottom: 30rem;
+	width: 10rem;
+	height: 10rem;
+	background-color: $color-primary;
+	position: relative;
+	animation: move 10s linear infinite alternate;
+}
